@@ -42,8 +42,8 @@ A full-stack web application enabling users to search and discover food recipes 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo-url.git
-   cd recipe-search-project
+   git clone https://github.com/JohanR7/Food-recipe-webapp-DJango-Angular-.git
+   cd backend
    ```
 
 2. **Install dependencies**:
@@ -60,7 +60,7 @@ A full-stack web application enabling users to search and discover food recipes 
 
 1. **Navigate to the frontend directory**:
    ```bash
-   cd recipe-frontend
+   cd frontend
    ```
 
 2. **Install dependencies**:
@@ -131,12 +131,13 @@ A full-stack web application enabling users to search and discover food recipes 
 - **Start Command**: `gunicorn project.wsgi:application`
 - **Environment**: Python
 - **Region**: Choose closest to target audience
+- **URL**: `https://customuser-2u8d.onrender.com`
 
 ### Frontend (Render)
 - **Build Command**: `npm install && ng build --configuration=production`
 - **Publish Directory**: `dist/frontend`
 - **Environment**: Static Site
-
+- **URL**: Coming soon
 ## 6. Error Handling
 
 ### Possible Status Codes
