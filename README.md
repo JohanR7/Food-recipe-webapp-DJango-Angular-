@@ -36,104 +36,47 @@ A full-stack web application enabling users to search and discover food recipes 
   - Recipe list
   - Recipe details
 
-## 3. Backend Setup (Django)
+## 3. Running the Project Locally
 
-### Prerequisites
-- Python 3.9+
-- pip package manager
-- Virtual environment support
-- Spoonacular API subscription
+### Backend (Django)
 
-### Installation Steps
-```bash
-# Create project directory
-mkdir recipe-search-project
-cd recipe-search-project
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-repo-url.git
+   cd recipe-search-project
+   ```
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Unix/macOS
-venv\Scripts\activate     # Windows
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# Install dependencies
-pip install django requests python-dotenv
+3. **Run the Django development server**:
+   ```bash
+   python manage.py runserver
+   ```
 
-# Create Django project
-django-admin startproject recipe_search
-cd recipe_search
+### Frontend (Angular)
 
-# Create API app
-python manage.py startapp api
-```
+1. **Navigate to the frontend directory**:
+   ```bash
+   cd recipe-frontend
+   ```
 
-### Configuration
-1. `.env` File
-```
-SPOONACULAR_API_KEY=your_api_key_here
-DEBUG=False
-SECRET_KEY=your_django_secret_key
-ALLOWED_HOSTS=localhost,127.0.0.1,your-render-domain
-```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-2. `settings.py` Updates
-```python
-INSTALLED_APPS = [
-    ...
-    'api',
-    'corsheaders',
-]
+3. **Run the Angular development server**:
+   ```bash
+   ng serve
+   ```
 
-MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
-    ...
-]
+4. **Access the application**:
+   Open your browser and go to `http://localhost:4200` to view the application.
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",
-    "https://your-frontend-domain.com"
-]
-```
-
-## 4. Frontend Setup (Angular)
-
-### Prerequisites
-- Node.js 18+
-- Angular CLI
-- npm package manager
-
-### Installation
-```bash
-# Install Angular CLI globally
-npm install -g @angular/cli
-
-# Create new Angular project
-ng new recipe-frontend
-cd recipe-frontend
-
-# Install additional dependencies
-npm install @angular/material
-npm install bootstrap
-```
-
-### Project Structure
-```
-recipe-frontend/
-│
-├── src/
-│   ├── app/
-│   │   ├── components/
-│   │   │   ├── search/
-│   │   │   └── recipe-list/
-│   │   ├── services/
-│   │   │   └── recipe.service.ts
-│   │   └── models/
-│   │       └── recipe.model.ts
-│   └── environments/
-│       ├── environment.ts
-│       └── environment.prod.ts
-```
-
-## 5. API Endpoint Details
+## 4. API Endpoint Details
 
 ### Request Specification
 - **URL**: `/search_recipes`
@@ -144,7 +87,7 @@ recipe-frontend/
 
 ### Response Structure
 ```json
-[
+[ 
   {
     "name": "Pasta Carbonara",
     "description": "Ready in 20 minutes. Servings: 2.",
@@ -181,7 +124,7 @@ recipe-frontend/
 ]
 ```
 
-## 6. Deployment
+## 5. Deployment
 
 ### Backend (Render)
 - **Build Command**: `pip install -r requirements.txt`
@@ -194,7 +137,7 @@ recipe-frontend/
 - **Publish Directory**: `dist/frontend`
 - **Environment**: Static Site
 
-## 7. Error Handling
+## 6. Error Handling
 
 ### Possible Status Codes
 - `200`: Successful request
@@ -202,32 +145,32 @@ recipe-frontend/
 - `404`: No recipes found
 - `500`: Server or API error
 
-## 8. Performance Optimization
+## 7. Performance Optimization
 - Implement caching
 - Use lazy loading
 - Minimize API calls
 - Implement debounce on search
 
-## 9. Security Considerations
+## 8. Security Considerations
 - Use environment variables
 - Implement rate limiting
 - Validate and sanitize inputs
 - Use HTTPS
 - Manage API key securely
 
-## 10. Future Enhancements
+## 9. Future Enhancements
 - User authentication
 - Save favorite recipes
 - Nutritional information
 - Advanced filtering
 
-## 11. Troubleshooting
+## 10. Troubleshooting
 - Verify API connectivity
 - Check network logs
 - Validate environment configurations
 - Monitor API usage limits
 
-## 12. Contributing
+## 11. Contributing
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature-name`)
 3. Commit your changes (`git commit -m 'Add feature'`)
