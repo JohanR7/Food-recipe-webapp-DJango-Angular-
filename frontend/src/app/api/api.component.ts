@@ -33,9 +33,14 @@ export class ApiComponent {
       this.results = [];
 
       console.log('Searching for:', this.item);
-      const apiUrl = `http://localhost:8000/api/search_recipes/?query=${this.item}`;
+
+      // Use the production or local API URL dynamically
+      const apiUrl = this.isProduction()
+        ? `https://food-recipe-8l8i.onrender.com/api/search_recipes/?query=${this.item}`
+        : `http://localhost:8000/api/search_recipes/?query=${this.item}`;
+
       console.log('Making request to:', apiUrl);
-      
+
       this.http.get<Recipe[]>(apiUrl).subscribe({
         next: (response) => {
           console.log('Received response:', response);
@@ -52,5 +57,10 @@ export class ApiComponent {
         }
       });
     }
+  }
+
+  // Function to determine if it's production or local environment
+  private isProduction(): boolean {
+    return window.location.hostname !== 'localhost';
   }
 }
