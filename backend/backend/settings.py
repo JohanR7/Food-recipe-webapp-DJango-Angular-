@@ -140,5 +140,6 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",  # Your Angular app's URL
+    "http://localhost:4200",
+      "https://food-recipe-8l8i.onrender.com"  # Your Angular app's URL
 ]
