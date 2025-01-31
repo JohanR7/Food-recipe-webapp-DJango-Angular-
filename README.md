@@ -131,7 +131,7 @@ A full-stack web application enabling users to search and discover food recipes 
 - **Start Command**: `gunicorn project.wsgi:application`
 - **Environment**: Python
 - **Region**: Choose closest to target audience
-- **URL**: `https://customuser-2u8d.onrender.com`
+- **URL**: [Recipe Search API](https://customuser-2u8d.onrender.com/search_recipes)
 
 ### Frontend (Render)
 - **Build Command**: `npm install && ng build --configuration=production`
