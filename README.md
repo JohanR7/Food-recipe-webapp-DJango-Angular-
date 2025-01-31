@@ -1,6 +1,5 @@
 
 
-```md
 # 🍲 Food Recipe Search Application
 
 ## 1. Project Overview
