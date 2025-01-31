@@ -36,7 +36,7 @@ export class ApiComponent {
 
       // Use the production or local API URL dynamically
       const apiUrl = this.isProduction()
-        ? `https://food-recipe-8l8i.onrender.com/api/search_recipes/?query=${this.item}`
+        ? `https://customuser-2u8d.onrender.com/api/search_recipes/?query=${this.item}`
         : `http://localhost:8000/api/search_recipes/?query=${this.item}`;
 
       console.log('Making request to:', apiUrl);
