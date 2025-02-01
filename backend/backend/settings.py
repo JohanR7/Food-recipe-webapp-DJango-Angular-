@@ -13,7 +13,7 @@ import os
 import dj_database_url
 from pathlib import Path
 import environ
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the projet like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 env=environ.Env()
 environ.Env.read_env(BASE_DIR/'.env')
@@ -140,6 +140,5 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",  # For local development
-    "https://food-recipe-d0298.web.app"  # Your Firebase frontend URL
+    True # Your Firebase frontend URL
 ]
