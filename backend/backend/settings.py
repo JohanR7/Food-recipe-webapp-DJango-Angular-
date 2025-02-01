@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-vz60%rsvbrs1x&gy#mm!1^p*7!u#q$vrji03@)w)46m&3e@sth
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['customuser-2u8d.onrender.com',"localhost"]
+ALLOWED_HOSTS = ['customuser-2u8d.onrender.com',"localhost",'food-recipe-d0298.web.app']
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -140,6 +140,6 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",
-    "https://food-recipe-8l8i.onrender.com"  # Your Angular app's URL
+    "http://localhost:4200",  # For local development
+    "https://food-recipe-d0298.web.app"  # Your Firebase frontend URL
 ]
