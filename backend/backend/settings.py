@@ -139,6 +139,5 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
-    True # Your Firebase frontend URL
-]
+CORS_ALLOW_ALL_ORIGINS = True  # Temporary for debugging
+
