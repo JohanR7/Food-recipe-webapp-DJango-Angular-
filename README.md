@@ -127,18 +127,10 @@ A full-stack web application enabling users to search and discover food recipes 
 ## 5. Deployment
 
 ### Backend (Render)
-- **Build Command**: `pip install -r requirements.txt`
-- **Start Command**: `gunicorn project.wsgi:application`
-- **Environment**: Python
-- **Region**: Choose closest to target audience
 - **URL**: [Recipe Search API](https://customuser-2u8d.onrender.com/search_recipes)
 
-### Frontend (Render)
-- **Build Command**: `npm install && ng build --configuration=production`
-- **Publish Directory**: `dist/frontend`
-- **Environment**: Static Site
-- **URL**: Coming soon
-## 6. Error Handling
+### Frontend (Firebase)
+- **URL**: [Food Recipe](https://food-recipe-9599e.web.app/#/)
 
 ### Possible Status Codes
 - `200`: Successful request
